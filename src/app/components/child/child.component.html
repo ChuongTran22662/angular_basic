@@ -1,0 +1,32 @@
+<div class="panel panel-success">
+  <div class="panel-heading">
+    <h3 class="panel-title">Panel title</h3>
+  </div>
+  <div class="panel-body">
+    {{ isMarried }}
+    {{ age }}
+
+    <div *ngFor="let user of users">
+      {{ user.id }}
+      {{ user.name }}
+    </div>
+
+    <form>
+      <legend>Form title</legend>
+
+      <div class="form-group">
+        <label for="">Full name :</label>
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Input field"
+          [(ngModel)]="txtFullName"
+          [ngModelOptions]="{standalone: true}"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="onSubmitForm()">
+        Send
+      </button>
+    </form>
+  </div>
+</div>
