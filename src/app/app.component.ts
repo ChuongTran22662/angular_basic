@@ -6,13 +6,18 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  @ViewChild('txtName') name: ElementRef;
+  title: string = 'lifecycle';
+  isShowing: boolean = true;
+  total: number = 0;
 
-  onGetData(txtName: ElementRef): void {
-    console.log(txtName);
+  a: number;
+  b: number;
+
+  onToggle() {
+    this.isShowing = !this.isShowing;
   }
 
-  onGetDataComp(): void {
-    console.log(this.name.nativeElement.value);
+  amount() {
+    this.total = +this.a + +this.b;
   }
 }

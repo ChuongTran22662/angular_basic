@@ -1,27 +1,24 @@
-<div class="container" [style.margin-top.px]="30">
+<div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">Template ref</h3>
+          <h3 class="panel-title">{{ title }}</h3>
         </div>
         <div class="panel-body">
-          <input type="text" class="form-control" #txtName />
-          <button
-            type="button"
-            class="btn btn-danger"
-            [style.margin-top.px]="10"
-            (click)="onGetData(txtName)"
-          >
-            Get data
+          <ng-container *ngIf="isShowing">
+            <app-lifecycle-hook [total]="total"></app-lifecycle-hook>
+          </ng-container>
+
+          <button type="button" class="btn btn-primary" (click)="onToggle()">
+            Toggle
           </button>
-          <button
-            type="button"
-            class="btn btn-danger"
-            [style.margin-top.px]="10"
-            (click)="onGetDataComp()"
-          >
-            Get data comp
+          <hr />
+          Số thứ 1 :
+          <input type="text" class="form-control" [(ngModel)]="a" /> Số thứ 2 :
+          <input type="text" class="form-control" [(ngModel)]="b" />
+          <button type="button" class="btn btn-danger" (click)="amount()">
+            Sum
           </button>
         </div>
       </div>

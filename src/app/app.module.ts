@@ -9,6 +9,7 @@ import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.compon
 import { StructuralComponent } from './structural/structural.component';
 import { ChildComponent } from './components/child/child.component';
 import { FormatDataPipe } from './pipes/format-data.pipe';
+import { LifecycleHookComponent } from './components/lifecycle-hook/lifecycle-hook.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormatDataPipe } from './pipes/format-data.pipe';
     TwoWayBindingComponent,
     StructuralComponent,
     ChildComponent,
-    FormatDataPipe
+    FormatDataPipe,
+    LifecycleHookComponent
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
