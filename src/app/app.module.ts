@@ -8,6 +8,7 @@ import { ComponentToViewComponent } from './component-to-view/component-to-view.
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { StructuralComponent } from './structural/structural.component';
 import { ChildComponent } from './components/child/child.component';
+import { FormatDataPipe } from './pipes/format-data.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ChildComponent } from './components/child/child.component';
     ComponentToViewComponent,
     TwoWayBindingComponent,
     StructuralComponent,
-    ChildComponent
+    ChildComponent,
+    FormatDataPipe
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

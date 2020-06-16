@@ -1,13 +1,22 @@
-<div class="container" [style.margin.px]="30">
+<div class="container">
   <div class="row">
-    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      {{ txtFullName }}
-      <app-child
-        [married]="isMarried"
-        [age]="age"
-        [users]="users"
-        (txtFullName)="onGetFullName($event)"
-      ></app-child>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <table class="table table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>Tên Pipe</th>
+            <th>Đầu vào</th>
+            <th>Kết quả</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>FormatData</td>
+            <td>{{ content }}</td>
+            <td>{{ content | formatData : 10 : 20 }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </div>

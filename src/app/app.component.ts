@@ -6,22 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  public isMarried: boolean = true;
-  public age: number = 18;
-  public txtFullName: string;
-
-  public users: any[] = [
-    {
-      id: 1,
-      name: 'zzzz',
-    },
-    {
-      id: 2,
-      name: 'xxx',
-    },
-  ];
-
-  onGetFullName(value) {
-    this.txtFullName = value;
-  }
+  content: string = `10% building 0/1 modules 1 active ...asusDesktopWebAngular_Basicmy-app
+    node_modules@ngtoolswebpacksrcindex30% building 0/1 modules 1 active ...a`;
 }
