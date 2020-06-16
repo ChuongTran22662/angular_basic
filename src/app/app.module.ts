@@ -10,6 +10,9 @@ import { StructuralComponent } from './structural/structural.component';
 import { ChildComponent } from './components/child/child.component';
 import { FormatDataPipe } from './pipes/format-data.pipe';
 import { LifecycleHookComponent } from './components/lifecycle-hook/lifecycle-hook.component';
+import { FirstComponent } from './components/first/first.component';
+import { SecondComponent } from './components/second/second.component';
+import { LoggingService } from './services/logging.service';
 
 @NgModule({
   declarations: [
@@ -19,10 +22,14 @@ import { LifecycleHookComponent } from './components/lifecycle-hook/lifecycle-ho
     StructuralComponent,
     ChildComponent,
     FormatDataPipe,
-    LifecycleHookComponent
+    LifecycleHookComponent,
+    FirstComponent,
+    SecondComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  providers: [
+    LoggingService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
