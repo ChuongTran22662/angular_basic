@@ -1,0 +1,16 @@
+<ng-container *ngIf="product; else noProduct">
+  <h1>{{ product.name }}</h1>
+  <h2>{{ product.price }}</h2>
+  <h2>{{ product.status ? "Active" : "Deactive" }}</h2>
+</ng-container>
+
+<ng-template #noProduct>
+  <h1>This product has been deleted</h1>
+</ng-template>
+
+
+<button type="button" class="btn btn-default" (click)="onEdit()">edit</button>
+
+<button type="button" class="btn btn-default" (click)="onBackToList()">
+  Back to list
+</button>

@@ -1,10 +1,18 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  title: string = 'Dependecy Injection : service';
+export class AppComponent  {
+
+  constructor(
+    public routerService: Router
+  ) {}
+
+  navigate(url: string) {
+    this.routerService.navigate([url]);
+  }
 }

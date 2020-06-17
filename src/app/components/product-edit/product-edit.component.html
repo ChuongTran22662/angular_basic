@@ -1,0 +1,18 @@
+
+<form>
+  <legend>Form edit</legend>
+  <div class="form-group">
+    <label for="">name</label>
+    <input type="text" class="form-control" [(ngModel)]="product.name">
+    <label for="">price</label>
+    <input type="text" class="form-control" [(ngModel)]="product.price">
+  </div>
+
+
+  <select class="form-control" required="required">
+    <option value="true">Active</option>
+    <option value="false">Deactive</option>
+  </select>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
